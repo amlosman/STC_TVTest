@@ -1,6 +1,5 @@
 package TestNG.RemoteDriver;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -8,8 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class RemoteDriverFactory {
-
-    static Logger log = Logger.getLogger(RemoteDriverFactory.class);
 
     static RemoteWebDriver createInstance(String browserName) {
         URL hubUrl = null;
@@ -33,9 +30,6 @@ public class RemoteDriverFactory {
             driver = new RemoteWebDriver(hubUrl, capability);
             return driver;
         }
-
-
-        log.info("RemoteDriverFactory created an instance of RemoteWebDriver for: " + browserName);
         return driver;
     }
 }

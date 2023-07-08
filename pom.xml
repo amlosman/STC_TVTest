@@ -16,6 +16,18 @@
 
     <build>
 
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                    <version>2.10.0</version>
+                    <configuration>
+                        <reportVersion>2.10.0</reportVersion>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -38,6 +50,7 @@
                     </properties>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
     <profiles>
@@ -80,17 +93,13 @@
     </profile>
     </profiles>
     <dependencies>
+
         <dependency>
-            <!--
-            A handy plugin that allows you to download driver binaries automatically
-            To download desired driver binaries, call the plugin like that:
-            mvn clean com.lazerycode.selenium:driver-binary-downloader-maven-plugin:selenium
-            to src: http://ardesco.lazerycode.com/index.php/2012/08/introducing-the-driver-binary-downloader-maven-plugin-for-selenium/
-            -->
-            <groupId>com.lazerycode.selenium</groupId>
-            <artifactId>driver-binary-downloader-maven-plugin</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.0.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -115,12 +124,7 @@
             <version>3.141.59</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.4.0</version>
-            <!--            <scope>test</scope>-->
-        </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
@@ -181,6 +185,11 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.0.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.8</version>
         </dependency>
     </dependencies>
 </project>

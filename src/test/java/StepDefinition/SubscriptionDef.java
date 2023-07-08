@@ -14,7 +14,6 @@ import org.testng.asserts.SoftAssert;
 import org.testng.log4testng.Logger;
 
 public class SubscriptionDef {
-    static Logger log = Logger.getLogger(SubscriptionPage.class);
     SoftAssert softAssert;
     SubscriptionPage subscriptionPage;
     public SubscriptionDef() {

@@ -15,10 +15,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Hooks {
-    static Logger log = Logger.getLogger(Hooks.class);
-
     static WebDriver driver;
-
     @Before
     public void before() {
         driver = WebBrowsers.chooseBrowserDriver(WebBrowsers.BrowserEnum.valueOf("Chrome"), ReadFromPropertiesFile.getValue("headless").equals("yes"));

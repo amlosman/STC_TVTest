@@ -6,14 +6,14 @@
     <test name="onChrome" preserve-order="false">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="TestNG.TestCases.Tests_UsingTestNG"/>
+            <class name="TestNG.TestCases.TestsUsingTestNG"/>
         </classes>
     </test>
 
     <test name="onChrome1" preserve-order="false">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="TestNG.TestCases.Tests_UsingTestNG"/>
+            <class name="TestNG.TestCases.TestsUsingTestNG"/>
         </classes>
     </test>
 

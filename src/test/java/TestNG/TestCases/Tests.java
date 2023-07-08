@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 public class Tests {
-    static Logger log = Logger.getLogger(Tests.class);
+
     @Test
     public void validateChoosingPlanTest() {
         invokeBrowser(ReadFromPropertiesFile.getValue("STC_TV_URL"));
@@ -28,9 +28,6 @@ public class Tests {
     }
 
     private void invokeBrowser(String url) {
-        log.info("Thread id = " + Thread.currentThread().getId());
-        log.info("Hash code of webDriver instance = " + DriverManager.getDriver().hashCode());
-        log.info("Test executed using = " + DriverManager.getBrowserInfo());
         DriverManager.getDriver().get(url);
     }
 }
