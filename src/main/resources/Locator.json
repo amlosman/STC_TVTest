@@ -1,0 +1,12 @@
+{
+  "header": "header",
+  "countryList": "country-title",
+  "countrySelectionID": "country",
+  "kuwaitID": "kw-contry-lable",
+  "KSAID": "sa-contry-lable",
+  "bahrainID": "bh",
+  "currencyLite": "currency-lite",
+  "currencyClassic": "currency-classic",
+  "currencyPremium": "currency-premium",
+  "countryName": "country-name"
+}
