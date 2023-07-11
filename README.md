@@ -7,4 +7,5 @@
         Execute TestRunner.java
 
    ### Run end to end tests 
+        Execute HomePageTest.java
 
