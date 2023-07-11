@@ -1,15 +1,15 @@
-package Pages;
+package pages;
 
-import Actions.WebActionsForElement;
-import FileWrappers.ReadDataFromJSonFile;
+import actions.WebActionsForElement;
+import fileWrappers.ReadDataFromJSonFile;
 import org.openqa.selenium.WebDriver;
 
-public class SubscriptionPage {
+public class HomePage {
 
 
     WebDriver driver;
     ReadDataFromJSonFile readDataFromJSonFile = new ReadDataFromJSonFile(ReadDataFromJSonFile.jsonPath);
-    public SubscriptionPage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 

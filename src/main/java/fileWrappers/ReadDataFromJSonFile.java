@@ -1,4 +1,4 @@
-package FileWrappers;
+package fileWrappers;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.json.JsonException;

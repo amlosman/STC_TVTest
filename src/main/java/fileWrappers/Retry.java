@@ -1,4 +1,4 @@
-package FileWrappers;
+package fileWrappers;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

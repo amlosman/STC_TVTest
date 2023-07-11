@@ -1,10 +1,17 @@
-package Actions;
+package actions;
 
-import FileWrappers.LoggingHandling;
+import com.google.common.io.Files;
+import fileWrappers.LoggingHandling;
+import fileWrappers.ReadFromPropertiesFile;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class WebActionsForElement {
     WebDriver driver;
@@ -92,5 +99,17 @@ public class WebActionsForElement {
     /*Expected Condition type*/
     public enum ExpectedConditionsEnum {
         presenceOfElement, ElementToBeClickable, visibilityOfElement
+    }
+    public  void captureScreenShot(WebDriver driver, String screenShotName) {
+        //make a destination for the screenshot
+        var camera = (TakesScreenshot) driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        String Error =  System.getProperty("user.dir")+ String.format(ReadFromPropertiesFile.getValue("screenShot"),screenShotName);
+        try {
+            Files.move(screenshot, new File(Error));
+        } catch (IOException e) {
+
+            System.out.println("Exception while taking screenshot"+e.getMessage());
+        }
     }
 }
